@@ -1,0 +1,30 @@
+﻿<Window x:Class="wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500"
+        Background="PaleGoldenrod">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="3" Text="Введите значения запаса:" Margin="10,31,-10,-17"/>
+        <TextBox x:Name="supplyTextBox" Grid.Row="3" Text="20,45,24,31,30" Margin="5,57,5,-45"/>
+        <TextBlock Grid.Row="3" Text="Введите значения спроса:" Margin="5,112,-5,-98"/>
+        <TextBox x:Name="demandTextBox" Grid.Row="3" Text="65,44,41" Margin="5,134,5,-124"/>
+        <TextBlock Grid.Row="3" Text="Введите транспортные расходы:" Margin="5,190,-5,-183"/>
+        <TextBox x:Name="costsTextBox" Grid.Row="3" Text="5,4,6,7,3,3,9,5,2,3,2,5,4,7,1" Margin="5,214,5,-204"/>
+        <Button Content="Расчитать" Click="CalculateButton_Click" Grid.Row="3" Margin="0,309,267,-299"/>
+        <DataGrid x:Name="resultGrid" Grid.Row="3" Margin="470,0,-5,10" AutoGenerateColumns="True"/>
+
+
+        <TextBlock Grid.Row="3" Text="Общие затраты на перевозку грузов:" Margin="0,273,0,-273"/>
+        <TextBlock x:Name="totalCostTextBlock" Grid.Row="3" Margin="209,76,78,-76"/>
+    </Grid>
+</Window>
